@@ -1,33 +1,18 @@
 <template>
     <div>
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            :color="checked ? 'black' : 'white'"
-            stroke="currentColor"
-            ref="svgContainerProps"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            style="cursor: pointer">
-            <mask id="mask">
-                <rect x="0" y="0" width="100%" height="100%" fill="white"/>
-                <circle ref="maskedCircleProps" cx="12" cy="4" r="9" fill="black"/>
-            </mask>
-            <circle ref="centerCircleProps" fill="black" cx="12" cy="12" r="9" mask="url(#mask)" />
-            <g ref="linesProps" stroke="currentColor">
-                <line x1="12" y1="1" x2="12" y2="3"/>
-                <line x1="12" y1="21" x2="12" y2="23"/>
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-                <line x1="1" y1="12" x2="3" y2="12"/>
-                <line x1="21" y1="12" x2="23" y2="12"/>
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-            </g>
+        <svg class="transition-transform duration-200 transform rotate-0"
+             style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;"
+             viewBox="0 0 1024 1024"
+             version="1.1"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M524.8 938.666667h-4.266667a439.893333 439.893333 0 0 1-313.173333-134.4 446.293333 446.293333 0 0 1-11.093333-597.333334 432.213333 432.213333 0 0 1 170.666666-116.906666 42.666667 42.666667 0 0 1 45.226667 9.386666 42.666667 42.666667 0 0 1 10.24 42.666667 358.4 358.4 0 0 0 82.773333 375.893333 361.386667 361.386667 0 0 0 376.746667 82.773334 42.666667 42.666667 0 0 1 54.186667 55.04A433.493333 433.493333 0 0 1 836.266667 810.666667a438.613333 438.613333 0 0 1-311.466667 128z" />
+        </svg>
+        <svg class="svg-icon"
+             style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;"
+             viewBox="0 0 1024 1024"
+             version="1.1"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M512 256a42.666667 42.666667 0 0 0 42.666667-42.666667V128a42.666667 42.666667 0 0 0-85.333334 0v85.333333a42.666667 42.666667 0 0 0 42.666667 42.666667zM896 469.333333h-85.333333a42.666667 42.666667 0 0 0 0 85.333334h85.333333a42.666667 42.666667 0 0 0 0-85.333334zM256 512a42.666667 42.666667 0 0 0-42.666667-42.666667H128a42.666667 42.666667 0 0 0 0 85.333334h85.333333a42.666667 42.666667 0 0 0 42.666667-42.666667zM265.386667 213.333333a42.666667 42.666667 0 0 0-59.306667 62.72l61.44 59.306667a42.666667 42.666667 0 0 0 31.146667 11.946667 42.666667 42.666667 0 0 0 30.72-13.226667 42.666667 42.666667 0 0 0 0-60.16zM725.333333 347.306667a42.666667 42.666667 0 0 0 29.44-11.946667l61.44-59.306667A42.666667 42.666667 0 0 0 758.613333 213.333333l-61.44 60.586667a42.666667 42.666667 0 0 0 0 60.16 42.666667 42.666667 0 0 0 28.16 13.226667zM512 768a42.666667 42.666667 0 0 0-42.666667 42.666667v85.333333a42.666667 42.666667 0 0 0 85.333334 0v-85.333333a42.666667 42.666667 0 0 0-42.666667-42.666667zM756.48 688.64a42.666667 42.666667 0 0 0-59.306667 61.44L758.613333 810.666667a42.666667 42.666667 0 0 0 29.44 11.946666 42.666667 42.666667 0 0 0 30.72-12.8 42.666667 42.666667 0 0 0 0-60.586666zM267.52 688.64l-61.44 59.306667a42.666667 42.666667 0 0 0 0 60.586666 42.666667 42.666667 0 0 0 30.72 12.8 42.666667 42.666667 0 0 0 28.586667-10.666666l61.44-59.306667a42.666667 42.666667 0 0 0-59.306667-61.44zM512 341.333333a170.666667 170.666667 0 1 0 170.666667 170.666667 170.666667 170.666667 0 0 0-170.666667-170.666667z"/>
         </svg>
     </div>
 </template>
@@ -36,6 +21,7 @@
 //https://jfelix.info/blog/using-react-spring-to-animate-svg-icons-dark-mode-toggle
 //https://motion.vueuse.org/api/use-spring.html#spring
 import { useSpring } from '@vueuse/motion'
+// transition-transform duration-200 transform rotate-0
 
 export default {
     name: 'darkmode',
@@ -62,55 +48,11 @@ export default {
         }
     },
     computed: {
-        svgContainerProps(){
-            //transform
-            return useSpring(this.$refs.svgContainerProps, {
-                transform: "rotate(40deg)"
-            })
-        },
-        centerCircleProps(){
-            //r
-            return useSpring(this.$refs.centerCircleProps, {
-               r: 5
-            })
-        },
-        maskedCircleProps(){
-            // cx,
-            //     cy
-            return useSpring(this.$refs.maskedCircleProps,{
-                cx: 30,
-                cy: 0,
-            });
-        },
-        linesProps(){
-            // opacity
-            return useSpring(this.$refs.linesProps,{
-                opacity: 0,
-            });
-        }
     },
     methods: {
         toggleDarkMode () {
 
         }
-    },
-    created () {
-        const { set, values, stop } = useSpring(this.$refs.svgContainer, {
-            mass: 4, tension: 250, friction: 35
-        })
-        useSpring(this.$refs.svgContainerProps, {
-            transform: "rotate(40deg)"
-        })
-        useSpring(this.$refs.centerCircleProps, {
-            r: 5
-        })
-        useSpring(this.$refs.maskedCircleProps,{
-            cx: 30,
-            cy: 0,
-        });
-        return useSpring(this.$refs.linesProps,{
-            opacity: 1,
-        });
     }
 }
 </script>
