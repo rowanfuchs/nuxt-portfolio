@@ -90,15 +90,26 @@
                     </div>
                 </div>
                 <div class="bg-white w-full mb-6 shadow-xl rounded-lg dark:bg-gray-800">
-                    <div class="mt-10 py-10 border-t border-gray-300 dark:border-gray-700 text-center">
-                        <div class="text-center">
-                            <h3 class="text-4xl font-semibold leading-normal mb-2 text-gray-700 dark:text-gray-200 mb-2">
-                                Stack
-                            </h3>
+                    <div class="mt-10 py-10 border-t border-gray-300 dark:border-gray-700">
+                        <div class="grid grid-cols-3 px-4">
+                            <div class="col-start-2 text-center">
+                                <h3 class="text-4xl font-semibold leading-normal mb-2 text-gray-700 dark:text-gray-200 mb-2">
+                                    Stack
+                                </h3>
+                            </div>
+                            <div>
+                                <label for="toggle-text" class=" cursor-pointer">
+                                    <div class="block relative float-right">
+                                        <input v-on:change="change()" type="checkbox" id="toggle-text" class="sr-only" />
+                                        <div class="block bg-gray-600 w-6 h-4 rounded-full" />
+                                        <div class="dot absolute left-1 top-1 bg-white w-2 h-2 rounded-full transition" />
+                                    </div>
+                                </label>
+                            </div>
                         </div>
                         <div class="flex flex-wrap justify-center">
                             <div class="w-full lg:w-10/12 px-4">
-                                <Stack/>
+                                <Stack :display-images="displayImages"/>
                             </div>
                         </div>
                     </div>
@@ -118,6 +129,7 @@ export default {
     components: {Timeline, Stack},
     data() {
         return {
+            displayImages: true,
             backgroundImage: backgroundImage,
             images: [
                 {title: "HTML", src: require("~/assets/html5.svg")},
@@ -139,6 +151,9 @@ export default {
             if (newWindow) {
                 newWindow.opener = null
             }
+        },
+        change() {
+            this.displayImages = !this.displayImages
         }
     }
 }

@@ -85,3 +85,7 @@ body {
 .v-enter-to {
     @apply transition-transform duration-200 transform rotate-0
 }
+
+input:checked ~ .dot {
+    @apply transform translate-x-full bg-green-500
+}
