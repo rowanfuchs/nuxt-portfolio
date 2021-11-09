@@ -1,17 +1,14 @@
 <template>
     <div class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between">
         <div class="container p-4 mx-auto flex flex-wrap items-center justify-between">
+            <div class="text-white text-xs block">
+                Built with <span class="text-red-700">&nbsp;♥&nbsp;</span> on Nuxt with Vue and Tailwind CSS
+                <a class="block" href="https://react.rowanfuchs.nl/">Switch to React</a>
+            </div>
             <div class="flex flex-grow justify-end">
                 <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
                     <li class="flex items-center">
                         <Darkmode/>
-                        <!--                        <DarkModeSwitch
-                                                    style={{marginBottom: '2rem'}}
-                                                sunColor={'white'}
-                                                checked={state.darkMode}
-                                                onChange={() => state.dispatch({ type: !state.darkMode})}
-                                                size={32}
-                                                />-->
                     </li>
                 </ul>
             </div>
