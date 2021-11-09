@@ -20,7 +20,7 @@ export default {
                 },
             ],
             link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
-            bodyAttrs: {
+            htmlAttrs: {
                 class: this.darkMode ? 'dark' : 'light'
             }
         }
