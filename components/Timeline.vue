@@ -9,9 +9,10 @@
                     {{ project.date }}
                 </span>
                 <span class="float-right cursor-pointer" v-on:click="openImageModal(project.index)">
+                    <div class="absolute w-4 h-4 bg-blue-300 animate-ping-slow opacity-50"/>
                     <svg class="fill-current text-gray-400"
-                         width="18"
-                         height="18"
+                         width="16"
+                         height="16"
                          viewBox="0 0 512 512">
                         <g>
                             <path
