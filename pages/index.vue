@@ -66,7 +66,6 @@
                                     <p class="text-lg leading-relaxed text-gray-700 dark:text-gray-200">
                                         I am an enthusiastic, creative and ambitious person who is always willing to
                                         learn and broaden my experience.
-                                        {/* eslint-disable-next-line react/no-unescaped-entities */}
                                         I'm always looking for a challenge and adapt easily to new environments.
                                         I enjoy working independently while also thrive when working in a team.
                                     </p>
