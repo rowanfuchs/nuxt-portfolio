@@ -2,9 +2,9 @@
     {
         "index": 16,
         "date": "Okt 2021",
-        "title": "Portfolio",
-        "image": "",
-        "description": "",
+        "title": "Portfolio in React",
+        "image": "/portfolio/portfolio_react.png",
+        "description": "Refreshed my portfolio in Next and Tailwind CSS",
         "types": [
             "all",
             "react",
@@ -15,13 +15,14 @@
     {
         "index": 15,
         "date": "Okt 2021",
-        "title": "Portfolio",
-        "image": "",
-        "description": "",
+        "title": "Portfolio in Vue.js",
+        "image": "/portfolio/portfolio_vue.png",
+        "description": "Refreshed my portfolio in Nuxt and Tailwind CSS",
         "types": [
             "all",
             "vue",
-            "nuxt"
+            "nuxt",
+            "tailwind"
         ],
         "cancelled": false
     },

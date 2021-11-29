@@ -42,7 +42,7 @@
                                     <img v-for="(image, key) in images"
                                          :key="key"
                                          width="64"
-                                         class="mr-4 p-3 hover:opacity-80"
+                                         class="mx-2 p-3 hover:opacity-80 md:mr-4"
                                          :src="image.src"
                                          :alt="image.title"
                                          :title="image.title">
