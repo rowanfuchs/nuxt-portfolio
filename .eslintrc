@@ -1,0 +1,17 @@
+{
+    "root": true,
+    "parser": "vue-eslint-parser",
+    "parserOptions": {
+        "sourceType": "module"
+    },
+    "extends": [
+        "@nuxtjs",
+        "plugin:vue/recommended",
+        "eslint:recommended",
+        "plugin:prettier/recommended"
+    ],
+    "plugins": ["vue", "prettier", "nuxt"],
+    "rules": {
+        "vue/no-unused-vars": "error"
+    }
+}

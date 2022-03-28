@@ -5,7 +5,7 @@ export const state = () => ({
 
 // actions
 export const actions = {
-    changeTheme({state, commit}, value) {
+    changeTheme({ state, commit }, value) {
         commit('setTheme', value)
     }
 }
