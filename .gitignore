@@ -89,5 +89,6 @@ sw.*
 # Vim swap files
 *.swp
 
-# remove lock from repository
+# remove lock files from repository
 package-lock.json
+yarn.lock
