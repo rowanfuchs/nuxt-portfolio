@@ -9,10 +9,7 @@
                     :title="data.title"
                     :src="data.image" />
             </p>
-            <button
-                type="button"
-                class="timeline-modal-close"
-                @click="$nuxt.$emit('modal', { data: null })">
+            <button type="button" class="timeline-modal-close" @click="toggle">
                 <svg
                     class="h-6 w-6 dark:text-gray-400"
                     fill="none"
