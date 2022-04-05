@@ -129,7 +129,7 @@
                                             id="toggle-text"
                                             type="checkbox"
                                             class="sr-only"
-                                            @change="change()" />
+                                            @change="displayImages = !displayImages" />
                                         <div class="block bg-gray-600 w-6 h-4 rounded-full" />
                                         <div
                                             class="dot absolute left-1 top-1 bg-white w-2 h-2 rounded-full transition" />
@@ -139,7 +139,7 @@
                         </div>
                         <div class="flex flex-wrap justify-center">
                             <div class="w-full lg:w-10/12 px-4">
-                                <SkillStack :display-images="displayImages" />
+                                <SkillStack :display-images.sync="displayImages" />
                             </div>
                         </div>
                     </div>
@@ -181,9 +181,6 @@ export default {
             if (newWindow) {
                 newWindow.opener = null
             }
-        },
-        change() {
-            this.displayImages = !this.displayImages
         }
     }
 }

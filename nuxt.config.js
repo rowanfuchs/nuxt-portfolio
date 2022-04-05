@@ -12,7 +12,7 @@ export default {
             lang: 'en'
         },
         meta: [
-            { charset: 'utf-8' },
+            {charset: 'utf-8'},
             {
                 name: 'viewport',
                 content: 'width=device-width, initial-scale=1'
@@ -55,5 +55,9 @@ export default {
     modules: [],
 
     // Build Configuration: https://go.nuxtjs.dev/config-build
-    build: {}
+    build: {},
+
+    server: {
+        host: '0.0.0.0'
+    }
 }
